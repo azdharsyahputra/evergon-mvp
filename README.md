@@ -1,22 +1,43 @@
 # Evergon — Modern Local Dev Environment (v0.1 Foundation Release)
+![stars](https://img.shields.io/github/stars/azdharsyahputra/evergon?style=social)
+![watchers](https://img.shields.io/github/watchers/azdharsyahputra/evergon?style=social)
+![forks](https://img.shields.io/github/forks/azdharsyahputra/evergon?style=social)
+![license](https://img.shields.io/github/license/azdharsyahputra/evergon)
 
-Evergon is a **modular, portable, and developer-centric local web environment**, designed as a cleaner and more extensible alternative to tools like **Laragon**, **XAMPP**, and **MAMP** — but with a modern architecture built on **Go**, **isolated runtimes**, and service-level orchestration.
+Evergon is a **modular, portable, and developer-centric local web environment**, designed as a cleaner and more extensible alternative to tools like **Laragon**, **XAMPP**, and **MAMP** — but with a modern architecture built on **Go**, isolated runtimes, and service-level orchestration.
 
-**Version 0.1 marks the first foundation milestone**, where the core engine is functional and the architecture is established.  
-Future releases will introduce the full panel UI, multi-PHP runtime switching, portable services, and installer packaging.
+This first foundation release establishes the **core engine**, runtime scaffolding, and architectural direction.  
+Future versions will introduce full UI control, runtime switching, portable services, and installer packaging.
+
+---
+
+## Preview (Dashboard Sneak Peek)
+
+<p align="center">
+  <img src="docs/images/dashboard.png" width="920">
+</p>
+
+The upcoming panel provides:
+
+- service monitoring  
+- PHP / Nginx controls  
+- project detection  
+- system analytics  
+- runtime switching (planned)
 
 ---
 
 ## Why Evergon Exists
-Current dev-stacks are:
+
+Traditional local dev stacks are:
 
 ✖ monolithic  
-✖ hard-to-extend  
-✖ Windows-biased  
-✖ runtime-locked  
+✖ hard to extend  
+✖ Windows-dependent  
+✖ locked to fixed runtimes  
 ✖ not developer-first  
 
-Evergon aims to be:
+Evergon is built to be:
 
 ✅ portable  
 ✅ modular  
@@ -28,7 +49,7 @@ Evergon aims to be:
 
 # Project Status — v0.1 FOUNDATION
 
-### ✅ Fully Implemented
+### ✅ Implemented
 - Core Go Engine
 - Internal API surface
 - Base Process Manager
@@ -51,14 +72,12 @@ Evergon aims to be:
 - Windows installer
 - Add-on / plugin ecosystem
 
-> **Evergon is not production-ready yet.**
+> **Evergon is not production-ready.**
 > v0.1 is intended for architecture validation and experimentation.
 
 ---
 
 # Architecture
-
-Display:
 
 <p align="center">
   <img src="docs/images/architecture.png" width="820">
@@ -97,7 +116,7 @@ evergon/
 
 ### 1. Clone
 ```bash
-git clone https://github.com/yourusername/evergon.git
+git clone https://github.com/azdharsyahputra/evergon.git
 cd evergon
 ```
 
@@ -113,7 +132,7 @@ go build -o evergon-engine ./cmd/evergon-engine
 ```
 
 ### 4. Panel (placeholder)
-Structure exists — integration planned for v0.2+.
+Scaffold exists — integration planned for v0.2+.
 
 ---
 
@@ -130,7 +149,7 @@ Structure exists — integration planned for v0.2+.
 - PHP-FPM integration
 - MySQL portable runtime
 - SSL (self-signed)
-- Project presets (Laravel / CodeIgniter)
+- Project presets (Laravel / CI4)
 
 ## v0.4
 - Windows Installer (.exe)
@@ -138,20 +157,20 @@ Structure exists — integration planned for v0.2+.
 - Optional Caddy engine
 
 ## v1.0 Stable
-- Complete UI Panel
-- Full runtime ecosystem
+- Full control panel UI
+- Complete runtime ecosystem
 - Production-ready workflows
 
 ---
 
 ## Contributing
-Public contribution will open at **v0.3**.  
-Discussions and feedback already welcome.
+Public contribution opens at **v0.3**  
+Feedback and discussion already welcome.
 
 ---
 
 ## Star & Watch
-If you want updates when new releases drop:
+If you want to follow development progress:
 
 ⭐ **Star this repo**  
 👁 **Watch → Releases Only**
