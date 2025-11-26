@@ -1,101 +1,101 @@
-# Evergon (v0.1 – Foundation Release)
+# Evergon — Modern Local Dev Environment (v0.1 Foundation Release)
 
-Evergon is a modern, portable, and developer-centric local web environment — aiming to provide a clean and modular alternative to tools like Laragon.  
-**Version 0.1 marks the first foundation release**, where the core engine is built and the system architecture is established.
+Evergon is a **modular, portable, and developer-centric local web environment**, designed as a cleaner and more extensible alternative to tools like **Laragon**, **XAMPP**, and **MAMP** — but with a modern architecture built on **Go**, **isolated runtimes**, and service-level orchestration.
 
-This version focuses on engine-level infrastructure.  
-Future versions will include the full panel, PHP runtime integration, additional services, and installer tooling.
-
----
-
-## 🚧 Project Status — v0.1 (Early Foundation)
-
-This release contains:
-
-### ✔ Fully Implemented
-- Core Go Engine  
-- Internal API structure  
-- Process Manager (base)  
-- Nginx Manager (early implementation)  
-- Nginx Portable Runtime  
-- Configuration Loader  
-- Basic Project Scanner  
-
-### 🚧 In Progress
-- PHP Manager (runtime switching)  
-- Panel UI (React/Tailwind scaffolding only)  
-- Auto vhost generator  
-- Service lifecycle handling  
-- Engine-panel communication  
-
-### ❌ Not Implemented Yet (Coming Soon)
-- MySQL portable runtime  
-- PHP-FPM orchestration  
-- SSL support  
-- Full installer pipeline  
-- Add-on / plugin system  
-
-> **Evergon is not ready for production use.**  
-> This version is intended for architecture validation and local development experiments.
+**Version 0.1 marks the first foundation milestone**, where the core engine is functional and the architecture is established.  
+Future releases will introduce the full panel UI, multi-PHP runtime switching, portable services, and installer packaging.
 
 ---
 
-# 📐 Architecture Overview
+## Why Evergon Exists
+Current dev-stacks are:
 
-Save the image to:
+✖ monolithic  
+✖ hard-to-extend  
+✖ Windows-biased  
+✖ runtime-locked  
+✖ not developer-first  
 
-```
-docs/images/architecture.png
-```
+Evergon aims to be:
 
-Then the README displays it here:
+✅ portable  
+✅ modular  
+✅ cross-platform  
+✅ service-oriented  
+✅ developer-controlled  
+
+---
+
+# Project Status — v0.1 FOUNDATION
+
+### ✅ Fully Implemented
+- Core Go Engine
+- Internal API surface
+- Base Process Manager
+- Early Nginx Manager
+- Portable Nginx Runtime
+- Config Loader
+- Basic Project Scanner
+
+### 🧩 In Development
+- PHP runtime switching manager
+- Control Panel (React + Tailwind)
+- Auto virtual host generator
+- Service lifecycle orchestration
+- Engine ↔ Panel communication layer
+
+### 🔜 Coming Soon
+- MySQL portable runtime
+- PHP-FPM orchestration
+- SSL support
+- Windows installer
+- Add-on / plugin ecosystem
+
+> **Evergon is not production-ready yet.**
+> v0.1 is intended for architecture validation and experimentation.
+
+---
+
+# Architecture
+
+Display:
 
 <p align="center">
   <img src="docs/images/architecture.png" width="820">
 </p>
 
-The system flows horizontally:
+**Horizontal flow:**
 
-**Panel → Engine → Runtime (Nginx, PHP Versions, Projects)**  
-Engine acts as the central orchestrator.
+**Panel → Engine → Runtimes (Nginx / PHP / Projects)**  
+The Engine acts as the orchestration core.
 
 ---
 
-## 🧭 Project Structure
+## Project Structure
 
 ```
 evergon/
   engine/
     cmd/evergon-engine/
-    internal/
-      api/
-      process/
-      manager/
-      scanner/
-      config/
-      util/
+    internal/{api,process,manager,scanner,config,util}
     go.mod
 
   panel/
   admin/
   php_versions/
-  nginx/
-    build/
-    portable/
+  nginx/{build,portable}
   nginx_template/
   installer/
-  docs/
-    images/
+  docs/images/
   public/
   www/
-  README.md
 ```
 
 ---
 
-## 🚀 Getting Started (v0.1)
+# Getting Started (v0.1)
 
-### 1. Clone Repo
+### 1. Clone
 ```bash
 git clone https://github.com/yourusername/evergon.git
 cd evergon
@@ -112,59 +112,57 @@ go build -o evergon-engine ./cmd/evergon-engine
 ./evergon-engine
 ```
 
-### 4. Panel (not yet functional)
-Panel UI structure exists but not wired to backend.
+### 4. Panel (placeholder)
+Structure exists — integration planned for v0.2+.
 
 ---
 
-## 🛠 Configuration
+# Roadmap
 
-Engine config is located here:
+## v0.2
+- PHP Manager (runtime switching)
+- Engine ↔ Panel communication
+- Auto-vhost generation
+- Service lifecycle control
+- Basic install script
 
-```
-engine/internal/config/config.go
-```
+## v0.3
+- PHP-FPM integration
+- MySQL portable runtime
+- SSL (self-signed)
+- Project presets (Laravel / CodeIgniter)
 
-Handles:
-- Runtime paths  
-- Nginx executable  
-- PHP version slots (future)  
-- Project scanning rules  
+## v0.4
+- Windows Installer (.exe)
+- Plugin system
+- Optional Caddy engine
 
----
-
-## 🗺 Roadmap (Next Versions)
-
-### v0.2
-- Full PHP Manager  
-- Panel ↔ Engine communication  
-- Automatic Vhost Generator  
-- Service lifecycle management  
-- Basic installation script
-
-### v0.3
-- PHP-FPM integration  
-- MySQL portable runtime  
-- Project templates (Laravel / CI4)  
-- SSL generation (self-signed)
-
-### v0.4
-- Windows installer (.exe)  
-- Plugin/add-on system  
-- Multi-engine option (Nginx/Caddy)
-
-### v1.0
-- Full stable release  
-- Complete control panel  
-- Production-ready workflows  
+## v1.0 Stable
+- Complete UI Panel
+- Full runtime ecosystem
+- Production-ready workflows
 
 ---
 
-## 📄 License  
+## Contributing
+Public contribution will open at **v0.3**.  
+Discussions and feedback already welcome.
+
+---
+
+## Star & Watch
+If you want updates when new releases drop:
+
+⭐ **Star this repo**  
+👁 **Watch → Releases Only**
+
+---
+
+## License
 MIT License
 
 ---
 
-## ✍ Author  
-**Muhammad Azdhar Syahputra** — Creator & Lead Developer (Evergon)
-
+## Author
+**Muhammad Azdhar Syahputra**  
+Creator & Lead Developer — Evergon
